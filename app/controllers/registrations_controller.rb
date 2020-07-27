@@ -1,4 +1,5 @@
 class RegistrationsController < ApplicationController
+  # Create new user
   def create
     user = User.create(
       username: params['user']['username'],
@@ -21,4 +22,5 @@ class RegistrationsController < ApplicationController
       render json: { status: :internal_server_error }
     end
   end
+
 end
