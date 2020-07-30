@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # Currently using devise gem so these lines are no need
   #has_secure_password 
-  #validates_presence_of :username
+  validates_presence_of :username
   #validates_presence_of :password
   #validates_uniqueness_of :username
+  has_many :posts
 end
